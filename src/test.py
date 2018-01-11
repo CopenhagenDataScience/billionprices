@@ -1,8 +1,10 @@
 import datetime, os
 now = datetime.datetime.now()
 
-if (not os.path.exists("output/test.txt")):
+if( not os.path.exists("output")):
     os.mkdir("output")
+
+if (not os.path.exists("output/test.txt")):
     string = str(now.hour) + ":" + str(now.minute) + ":" + str(now.second)
     with open("output/test.txt", "w") as myfile:
         myfile.write(string)
